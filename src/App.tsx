@@ -1,26 +1,29 @@
+import './App.sass';
+import ImageFunc from './imageFunc';
+import DefaultParagraph, { ParagraphLearn } from './components/paragraph/Paragraph';
+import Button from './components/button/Button';
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { IAppState } from './app-state';
+import NameChange from './components/name-change/NameChange';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends React.Component {
+  state: IAppState = { name: "Default name" };
+
+  render(): JSX.Element {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <ImageFunc altText="logo" />
+          <DefaultParagraph />
+          <ParagraphLearn learnText="Custom learning" />
+          <Button text="Hit Me!" />
+          <NameChange name={this.state.name} nameChangeConfirmed={this.updateNameConfirmed.bind(this)} />
+        </header>
+      </div>
+    );
+  }
+
+  private updateNameConfirmed(name: string): void {
+    this.setState({name});
+  }
 }
-
-export default App;
