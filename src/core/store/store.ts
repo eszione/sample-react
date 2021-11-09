@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import counterReducer from './components/button/button-slice';
+import counterReducer from '../../modules/home/button/button-slice';
 
 export const store = configureStore({
     reducer: {

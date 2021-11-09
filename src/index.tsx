@@ -3,9 +3,9 @@ import { render } from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
-import { store } from './store';
+import { store } from './core/store/store';
 import { BrowserRouter } from 'react-router-dom';
-import RouterWrapper from './routes-wrapper';
+import RouterWrapper from './core/routing/routes-wrapper';
 
 render(
     <Provider store={store}>

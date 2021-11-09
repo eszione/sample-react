@@ -1,8 +1,6 @@
 import { useRoutes } from "react-router-dom";
 import { routes } from "./routes";
 
-const RouterWrapper = () => {
+export default () => {
     return useRoutes(routes);
 };
-
-export default RouterWrapper;

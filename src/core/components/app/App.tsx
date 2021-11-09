@@ -1,10 +1,12 @@
 import './App.sass';
-import ImageFunc from './imageFunc';
-import DefaultParagraph, { ParagraphLearn } from './components/paragraph/Paragraph';
-import Button from './components/button/Button';
 import React from 'react';
 import { IAppState } from './app-state';
-import NameChange from './components/name-change/NameChange';
+import { Outlet } from 'react-router';
+import Button from '../../../modules/home/button/Button';
+import ImageFunc from '../../../modules/home/image/imageFunc';
+import NameChange from '../../../modules/home/name-change/NameChange';
+import DefaultParagraph, { ParagraphLearn } from '../../../modules/home/paragraph/Paragraph';
+import NavButton from '../../../shared/nav-button/nav-button-func';
 
 export default class App extends React.Component {
   state: IAppState = { name: "Default name" };
@@ -18,7 +20,9 @@ export default class App extends React.Component {
           <ParagraphLearn learnText="Custom learning" />
           <Button text="Hit Me!" />
           <NameChange name={this.state.name} nameChangeConfirmed={this.updateNameConfirmed.bind(this)} />
+          <NavButton to="/page2" text="Page2" />
         </header>
+        <Outlet />
       </div>
     );
   }
