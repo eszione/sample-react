@@ -1,3 +1,4 @@
+import './paragraph.sass';
 import React from "react";
 import { IParagraph } from "./paragraph-props";
 
@@ -14,7 +15,7 @@ export class ParagraphLearn extends React.Component<IParagraph> {
         return (
             <p>
                 <a 
-                    className="App-link"
+                    className="paragraph-link"
                     href="https://reactjs.org"
                     target="_blank"
                     rel="noopener noreferrer"

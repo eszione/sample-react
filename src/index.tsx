@@ -6,13 +6,20 @@ import { Provider } from 'react-redux';
 import { store } from './core/store/store';
 import { BrowserRouter } from 'react-router-dom';
 import RouterWrapper from './core/routing/routes-wrapper';
+import Footer from './core/components/footer/footer';
+import Header from './core/components/header/header';
+import Main from './core/components/main/main';
 
 render(
     <Provider store={store}>
       <React.StrictMode>
-          <BrowserRouter>
+          <Header />
+          <Main>
+            <BrowserRouter>
             <RouterWrapper />
-          </BrowserRouter>
+            </BrowserRouter>
+          </Main>
+          <Footer />
       </React.StrictMode>
     </Provider>,
   document.getElementById('root')
