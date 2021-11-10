@@ -2,11 +2,11 @@ import './App.sass';
 import React from 'react';
 import { IAppState } from './app-state';
 import { Outlet } from 'react-router';
-import Button from '../../../modules/home/button/Button';
-import ImageFunc from '../../../modules/home/image/imageFunc';
-import NameChange from '../../../modules/home/name-change/NameChange';
-import DefaultParagraph, { ParagraphLearn } from '../../../modules/home/paragraph/Paragraph';
+import Button from '../button/Button';
 import NavButton from '../../../shared/nav-button/nav-button-func';
+import ImageFunc from '../image/imageFunc';
+import NameChange from '../name-change/NameChange';
+import DefaultParagraph, { ParagraphLearn } from '../paragraph/Paragraph';
 
 export default class App extends React.Component {
   state: IAppState = { name: "Default name" };

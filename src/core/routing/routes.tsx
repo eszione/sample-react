@@ -1,4 +1,5 @@
 import { RouteObject } from 'react-router';
+import { Page2 } from '../../pages/page2/page2';
 import App from '../components/app/App';
 
 export const routes: RouteObject[] = [
@@ -13,6 +14,6 @@ export const routes: RouteObject[] = [
     },
     {
         path: "page2",
-        element: <App />
+        element: <Page2 />
     }
 ]

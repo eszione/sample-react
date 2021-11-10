@@ -3,7 +3,7 @@ import React from "react";
 import { IButtonProps } from "./button-props";
 import { connect } from "react-redux";
 import { decrement, increment } from "./button-slice";
-import { RootState } from "../../../core/store/store";
+import { RootState } from "../../store/store";
 
 export class Button extends React.Component<IButtonProps> {
     render(): JSX.Element {
